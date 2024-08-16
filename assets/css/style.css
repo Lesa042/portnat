@@ -1,0 +1,245 @@
+:root[color-mode="light"] {
+    --yell: #FFD700;
+    --yelld: #e6ac0b;
+    --text: #222222;
+    --textl: #333333;
+    --back: #ffffff;
+    --backd: #d3cec9;
+    --bordr: #7e7e7e;
+}
+
+:root[color-mode="dark"] {
+    --yell: #dbab0b;
+    --yelld: #c79c0e;
+    --back: #222222;
+    --backd: #333333;
+    --text: #F7F7F7;
+    --textl: #d3cec9;
+    --bordr: #7e7e7e;
+}
+
+* {
+    transition: .2s;
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: rgb(126, 126, 126) transparent;
+    scrollbar-color: rgba(126, 126, 126, 0.7) transparent;
+}
+
+
+body {
+    background-color: var(--back);
+    font-family: "Zilla Slab";
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: var(--text);
+}
+
+h1 {
+    font-family: "Roboto Mono";
+}
+
+span {
+    color: var(--textl);
+}
+
+a {
+    color: var(--yell);
+    text-decoration: none;
+}
+
+.header {
+    z-index: 42;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0.75rem 10vw;
+    position: fixed;
+    width: 100%;
+    -webkit-backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1rem);
+}
+
+[color-mode=light] .header {
+    background: rgba(255,255,255,0.85);
+}
+
+[color-mode=dark] .header {
+    background: rgba(34,34,34,0.9);
+}
+
+.header nav {
+    vertical-align: middle;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+}
+
+.header a {
+    color: var(--text);
+    vertical-align: middle;
+    font-size: larger;
+    transition: 0.2s;
+}
+
+.header .icon {
+    padding-left: 1rem;
+}
+
+.header .icon a {
+    font-family: "Roboto Mono";
+    letter-spacing: 0.1rem;
+    font-weight: bolder;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.header nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    font-size: 1.25rem;
+}
+
+.header nav a:hover {
+    padding: 0.6rem 1rem 0;
+}
+
+.parallax {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    transition: 0s;
+    background-image: url('../img/wallpaper.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    z-index: -1;
+}
+
+.lights {
+    height: 2.01rem;
+    width: 2.01rem;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-top: 0.25rem;
+    margin-left: 1rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+[color-mode="light"] .lights {
+    color: var(--back);
+    background-color: var(--yell);
+    transition: 0s;
+}
+
+[color-mode="dark"] .lights {
+    color: var(--back);
+    background-color: var(--text);
+}
+
+.sun,
+.mon {
+    transition: transform 0.5s ease-in-out, color 0s;
+    font-size: 1.5rem;
+    position: absolute;
+    padding: 0.25rem 0.25rem 0.1rem;
+}
+
+/* Styles for light mode */
+html[color-mode="light"] .mon {
+    transform: translateX(-3rem);
+}
+
+html[color-mode="light"] .lights:hover .sun {
+    transform: translateX(3rem);
+}
+
+html[color-mode="light"] .lights:hover .mon {
+    transform: translateX(0);
+}
+
+/* Styles for dark mode */
+html[color-mode="dark"] .sun {
+    transform: translateX(3rem);
+}
+
+html[color-mode="dark"] .lights:hover .sun {
+    transform: translateX(0);
+}
+
+html[color-mode="dark"] .lights:hover .mon {
+    transform: translateX(-3rem);
+}
+
+/* Styles when theme is changing for light mode */
+html.themechange[color-mode="light"] .lights:hover .sun {
+    transform: translateX(0);
+}
+
+html.themechange[color-mode="light"] .lights:hover .mon {
+    transform: translateX(-3rem);
+}
+
+/* Styles when theme is changing for dark mode */
+html.themechange[color-mode="dark"] .sun {
+    transform: translateX(3rem);
+}
+
+html.themechange[color-mode="dark"] .lights:hover .sun {
+    transform: translateX(3rem);
+}
+
+html.themechange[color-mode="dark"] .lights:hover .mon {
+    transform: translateX(0);
+}
+
+.desc {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1.5rem 5rem;
+    background-color: var(--back);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.desc:after, .desc:before {
+    transition: 0.2s;
+    content: '';
+    width: 100%;
+    height: 2rem;
+    border: solid var(--back) 0.25rem;
+    position: absolute;
+    bottom: -0.25rem;
+    border-top: 0;
+}
+
+.desc:after {
+    border-left: 0;
+    border-radius: 0 0 0.75rem 0;
+    left: -100%;
+}
+
+.desc:before {
+    border-right: 0;
+    border-radius: 0 0 0 0.75rem;
+    right: -100%;
+}
