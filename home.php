@@ -18,39 +18,7 @@
         </div>
     </div>
     <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
-    <p>This is the rest of the page content.</p>
+    
 
 <script src="assets/js/script.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
